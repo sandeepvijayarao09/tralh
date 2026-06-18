@@ -9,8 +9,8 @@ body{
   color:var(--ink);
   font-family:var(--text);
   font-size:var(--t-body);
-  line-height:1.6;
-  letter-spacing:-.01em;          /* Caslon tracked -5 units */
+  line-height:1.65;
+  letter-spacing:normal;          /* EB Garamond reads clean untracked */
   -webkit-font-smoothing:antialiased;
   text-rendering:optimizeLegibility;
 }
@@ -37,8 +37,8 @@ a:hover{text-decoration:underline;text-underline-offset:.18em;text-decoration-th
 .tile__inner > *{max-width:100%}
 
 /* ---- Display & text voices ---- */
-h1,h2,h3,h4{font-family:var(--display);font-weight:600;line-height:1.08;letter-spacing:0}
-.hero-display{font-family:var(--display);font-size:var(--t-hero);font-weight:700;line-height:1.04;letter-spacing:.005em}
+h1,h2,h3,h4{font-family:var(--display);font-weight:600;line-height:1.12;letter-spacing:.005em}
+.hero-display{font-family:var(--display);font-size:var(--t-hero);font-weight:500;line-height:1.06;letter-spacing:.01em}
 .display-lg{font-size:var(--t-display-lg)}
 .display-md{font-size:var(--t-display-md);line-height:1.18}
 .lead{font-family:var(--text);font-size:var(--t-lead);font-weight:400;line-height:1.32;color:var(--ink-muted)}
@@ -49,8 +49,8 @@ h1,h2,h3,h4{font-family:var(--display);font-weight:600;line-height:1.08;letter-s
 
 /* eyebrow / tagline — letter-spaced gold caps in place of Apple's small subhead */
 .eyebrow{
-  font-family:var(--text);font-size:var(--t-caption);font-weight:700;
-  text-transform:uppercase;letter-spacing:.32em;color:var(--accent);
+  font-family:var(--caps);font-size:12px;font-weight:500;
+  text-transform:uppercase;letter-spacing:.3em;color:var(--accent);
 }
 .tile--dark .eyebrow,.tile--void .eyebrow,.tile--dark-2 .eyebrow{color:var(--accent-on-dark)}
 
@@ -58,7 +58,7 @@ h1,h2,h3,h4{font-family:var(--display);font-weight:600;line-height:1.08;letter-s
 .rule{width:64px;height:1px;background:var(--accent);opacity:.7;margin-inline:auto}
 
 /* ceremonial script flourish (motto, the Vow) */
-.script{font-family:var(--script);font-weight:400;letter-spacing:0;line-height:1.3}
+.script{font-family:var(--display);font-style:italic;font-weight:500;letter-spacing:.01em;line-height:1.3}
 
 /* ---- Scroll reveal is owned by motion.css and gated on .js (no-JS safe) ---- */
 @media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto} }

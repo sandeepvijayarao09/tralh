@@ -5,17 +5,18 @@
    ============================================================ */
 
 @media (max-width:1068px){
-  :root{--t-hero:44px;--t-display-lg:36px;--t-display-md:30px;--t-lead:24px;--section:64px}
+  :root{--t-hero:52px;--t-display-lg:40px;--t-display-md:32px;--t-lead:24px;--section:64px}
 }
 @media (max-width:833px){
-  :root{--t-hero:38px;--t-display-lg:32px;--t-lead:22px}
+  :root{--t-hero:44px;--t-display-lg:36px;--t-lead:23px}
   .tile{padding-block:var(--xxl)}
-  .vow{font-size:26px}
+  .vow{font-size:28px}
   .foot__legal{justify-content:center;text-align:center}
   .swatches{grid-template-columns:repeat(6,1fr)}
+  .gnav__enquire{display:none}
 }
 @media (max-width:640px){
-  :root{--t-hero:32px;--t-display-lg:28px;--t-display-md:26px;--t-lead:20px;--t-body:17px;--section:48px}
+  :root{--t-hero:37px;--t-display-lg:30px;--t-display-md:27px;--t-lead:21px;--t-body:17px;--section:48px}
   .wrap{padding-inline:20px}
   .btn-row{flex-direction:column;align-items:stretch}
   .btn{width:100%}

@@ -1,9 +1,19 @@
 /* TRALH — interaction
-   Quiet by design: a nav tray, and reveals that arrive on scroll.
+   Quiet by design: current-page marker, a nav tray, and reveals on scroll.
    Reveal uses a rect check (not IntersectionObserver) so it fires reliably
    on first paint in every environment, including headless preview. */
 (function () {
   'use strict';
+
+  /* ---- Mark the current page in the nav ---- */
+  var path = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
+  var brand = { 'darbar.html': 1, 'solene.html': 1, 'auri.html': 1 };
+  document.querySelectorAll('.gnav__links a').forEach(function (a) {
+    var href = a.getAttribute('href');
+    if (href === path || (brand[path] && href === 'houses.html')) {
+      a.setAttribute('aria-current', 'page');
+    }
+  });
 
   /* ---- Mobile nav tray ---- */
   var burger = document.querySelector('.gnav__burger');
@@ -35,10 +45,7 @@
     }
   }
 
-  // Paint the hidden state first, then reveal in-view items so the
-  // entrance transition actually plays.
   requestAnimationFrame(function () { requestAnimationFrame(reveal); });
-
   window.addEventListener('scroll', reveal, { passive: true });
   window.addEventListener('resize', reveal, { passive: true });
   window.addEventListener('load', reveal);

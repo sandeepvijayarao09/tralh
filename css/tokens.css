@@ -20,17 +20,17 @@
   --rose:#C79E96;       /* XII. Rose Dynastique */
 
   /* ---- Semantic surfaces (Apple light/parchment <-> near-black) ---- */
-  --canvas:var(--lait);             /* primary light canvas — ivory, never white */
-  --canvas-parchment:var(--parchemin);
-  --surface-tile-dark:#111113;      /* Royal Sable tile */
-  --surface-tile-dark-2:#16161b;    /* micro-step lighter (stacked dark tiles) */
-  --surface-tile-dark-3:#0c0c0f;    /* micro-step darker / framed voids */
-  --surface-black:#08080a;          /* global nav / true void */
+  --canvas:#F9F5EC;                 /* refined warm ivory — pristine, never optical white */
+  --canvas-parchment:#EFE7D6;       /* cleaner parchment, a touch lighter */
+  --surface-tile-dark:#101014;      /* deep royal sable */
+  --surface-tile-dark-2:#16161c;    /* micro-step lighter (stacked dark tiles) */
+  --surface-tile-dark-3:#0b0b0f;    /* micro-step darker / framed voids */
+  --surface-black:#070709;          /* global nav / true void */
 
-  /* ---- Accent: the single interactive colour (gold replaces Apple blue) ---- */
-  --accent:var(--or);
-  --accent-on-dark:#D8B864;         /* brighter gold for links on sable (cf. Sky Link Blue) */
-  --accent-press:#A8863B;
+  /* ---- Accent: the single interactive colour — refined gilt gold ---- */
+  --accent:#C4A24C;                 /* luminous gilt — cleaner, less olive than flat Or Sacré */
+  --accent-on-dark:#E3C36F;         /* bright gilt for links and marks on sable */
+  --accent-press:#AB8A3C;
 
   /* ---- Ink ---- */
   --ink:#111113;                    /* text on light */
@@ -44,13 +44,14 @@
   --hairline-soft:rgba(17,17,19,.06);
   --hairline-on-dark:rgba(247,240,225,.16);
 
-  /* ---- Type voices ---- */
-  --display:"Bodoni Moda","ITC Bodoni 72","Didot",Georgia,serif;  /* Sovereign Display */
-  --text:"Libre Caslon Text","Adobe Caslon Pro",Georgia,serif;    /* Continuous Text */
-  --script:"Pinyon Script","Snell Roundhand",cursive;             /* Ceremonial engraving */
+  /* ---- Type voices (prestige serif system) ---- */
+  --display:"Cormorant Garamond","Cormorant",Georgia,serif;  /* Sovereign Display — high-contrast luxe serif */
+  --text:"EB Garamond","Adobe Caslon Pro",Georgia,serif;     /* Continuous Text — refined, warm, readable */
+  --caps:"Cinzel","Cormorant Garamond",serif;                /* Inscriptional capitals — wordmark, labels, headers */
+  --script:"Cormorant Garamond",Georgia,serif;               /* Ceremonial — set in italic */
 
-  /* ---- Type scale (Apple sizes, brand voices) ---- */
-  --t-hero:56px; --t-display-lg:40px; --t-display-md:34px;
+  /* ---- Type scale ---- */
+  --t-hero:64px; --t-display-lg:46px; --t-display-md:36px;
   --t-lead:28px; --t-lead-airy:24px; --t-tagline:21px;
   --t-body:18px; --t-caption:14px; --t-fine:12px; --t-nav:13px;
 
