@@ -24,7 +24,7 @@
 }
 @media (max-width:419px){
   :root{--t-hero:28px;--t-display-lg:25px}
-  .gnav__cipher{font-size:17px}
+  .gnav__cipher{font-size:14px;letter-spacing:.16em}
   .swatches{grid-template-columns:repeat(3,1fr)}
 }
 

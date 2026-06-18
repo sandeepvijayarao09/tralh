@@ -6,7 +6,7 @@
 /* ---- Global nav: ultra-thin void bar, pinned ---- */
 .gnav{position:sticky;top:0;z-index:100;background:var(--surface-black);height:52px;display:flex;align-items:center}
 .gnav__inner{display:flex;align-items:center;gap:var(--lg);width:100%;max-width:1320px;margin-inline:auto;padding-inline:24px}
-.gnav__cipher{font-family:var(--caps);color:var(--on-dark);font-size:18px;font-weight:600;letter-spacing:.3em;text-decoration:none}
+.gnav__cipher{font-family:var(--caps);color:var(--on-dark);font-size:16px;font-weight:600;letter-spacing:.24em;text-decoration:none;white-space:nowrap}
 .gnav__cipher:hover{color:var(--accent-on-dark);text-decoration:none}
 .gnav__links{display:flex;gap:22px;margin-inline:auto;list-style:none}
 .gnav__links a{color:var(--on-dark);font-family:var(--text);font-size:var(--t-nav);letter-spacing:.18em;text-transform:uppercase;opacity:.78;text-decoration:none;transition:opacity .2s,color .2s}
