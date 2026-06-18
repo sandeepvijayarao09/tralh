@@ -1,0 +1,33 @@
+/* ============================================================
+   TRALH — RESPONSIVE
+   Apple's collapsing strategy & type ramp, brand-adapted.
+   Breakpoints: 1440 (lock) · 1068 · 833 · 640 · 419
+   ============================================================ */
+
+@media (max-width:1068px){
+  :root{--t-hero:44px;--t-display-lg:36px;--t-display-md:30px;--t-lead:24px;--section:64px}
+}
+@media (max-width:833px){
+  :root{--t-hero:38px;--t-display-lg:32px;--t-lead:22px}
+  .tile{padding-block:var(--xxl)}
+  .vow{font-size:26px}
+  .foot__legal{justify-content:center;text-align:center}
+  .swatches{grid-template-columns:repeat(6,1fr)}
+}
+@media (max-width:640px){
+  :root{--t-hero:32px;--t-display-lg:28px;--t-display-md:26px;--t-lead:20px;--t-body:17px;--section:48px}
+  .wrap{padding-inline:20px}
+  .btn-row{flex-direction:column;align-items:stretch}
+  .btn{width:100%}
+  .swatches{grid-template-columns:repeat(4,1fr)}
+}
+@media (max-width:419px){
+  :root{--t-hero:28px;--t-display-lg:25px}
+  .gnav__cipher{font-size:17px}
+  .swatches{grid-template-columns:repeat(3,1fr)}
+}
+
+/* content locks at 1440 */
+@media (min-width:1441px){
+  .wrap--wide{max-width:1320px}
+}

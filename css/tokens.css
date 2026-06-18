@@ -1,0 +1,70 @@
+/* ============================================================
+   TRALH — DESIGN TOKENS
+   Apple's structural system, re-skinned to the Sovereign identity.
+   Colour values are the House Sovereign Palette (HOUSE_PALETTE.md), verbatim.
+   Type voices are the House Typography System (Bodoni / Caslon / script).
+   ============================================================ */
+:root{
+  /* ---- Sovereign Palette (eternal — see HOUSE_PALETTE.md) ---- */
+  --sable:#111113;      /* I.   Royal Sable — the absolute black */
+  --lait:#F7F0E1;       /* II.  Lait de Lune — the ivory (the House has no optical white) */
+  --or:#BF9B48;         /* III. Or Sacré — the regal gold (colour of the House mark) */
+  --argent:#C0C4C7;     /* IV.  Lune d'Argent — the silver moon */
+  --boeuf:#7C2F33;      /* V.   Sang de Bœuf — the oxblood */
+  --saphir:#1E3166;     /* VI.  Saphir Royal — the sapphire / House navy */
+  --emeraude:#125C40;   /* VII. Émeraude des Rois — the emerald */
+  --porphyre:#8A3437;   /* VIII.Porphyre — the heritage red */
+  --parchemin:#E2D9C4;  /* IX.  Parchemin — the parchment */
+  --fumee:#6E6D64;      /* X.   Fumée — the smoke */
+  --celadon:#A5C0B2;    /* XI.  Céladon */
+  --rose:#C79E96;       /* XII. Rose Dynastique */
+
+  /* ---- Semantic surfaces (Apple light/parchment <-> near-black) ---- */
+  --canvas:var(--lait);             /* primary light canvas — ivory, never white */
+  --canvas-parchment:var(--parchemin);
+  --surface-tile-dark:#111113;      /* Royal Sable tile */
+  --surface-tile-dark-2:#16161b;    /* micro-step lighter (stacked dark tiles) */
+  --surface-tile-dark-3:#0c0c0f;    /* micro-step darker / framed voids */
+  --surface-black:#08080a;          /* global nav / true void */
+
+  /* ---- Accent: the single interactive colour (gold replaces Apple blue) ---- */
+  --accent:var(--or);
+  --accent-on-dark:#D8B864;         /* brighter gold for links on sable (cf. Sky Link Blue) */
+  --accent-press:#A8863B;
+
+  /* ---- Ink ---- */
+  --ink:#111113;                    /* text on light */
+  --ink-muted:#6E6D64;              /* Fumée — secondary on light */
+  --ink-faint:rgba(17,17,19,.46);
+  --on-dark:#F7F0E1;                /* warm ivory text on sable (never pure white) */
+  --on-dark-muted:rgba(247,240,225,.62);
+
+  /* ---- Hairlines ---- */
+  --hairline:rgba(17,17,19,.12);
+  --hairline-soft:rgba(17,17,19,.06);
+  --hairline-on-dark:rgba(247,240,225,.16);
+
+  /* ---- Type voices ---- */
+  --display:"Bodoni Moda","ITC Bodoni 72","Didot",Georgia,serif;  /* Sovereign Display */
+  --text:"Libre Caslon Text","Adobe Caslon Pro",Georgia,serif;    /* Continuous Text */
+  --script:"Pinyon Script","Snell Roundhand",cursive;             /* Ceremonial engraving */
+
+  /* ---- Type scale (Apple sizes, brand voices) ---- */
+  --t-hero:56px; --t-display-lg:40px; --t-display-md:34px;
+  --t-lead:28px; --t-lead-airy:24px; --t-tagline:21px;
+  --t-body:18px; --t-caption:14px; --t-fine:12px; --t-nav:13px;
+
+  /* ---- Spacing (8px base) ---- */
+  --xxs:4px; --xs:8px; --sm:12px; --md:17px; --lg:24px; --xl:32px; --xxl:48px; --section:80px;
+
+  /* ---- Radius (luxury-restrained; pill reserved for chips) ---- */
+  --r-none:0; --r-sm:4px; --r-md:8px; --r-lg:16px; --r-pill:9999px;
+
+  /* ---- Elevation: the single shadow, for artifacts resting on a surface ---- */
+  --shadow-artifact:rgba(0,0,0,.22) 3px 5px 30px 0;
+  --shadow-artifact-dark:rgba(0,0,0,.55) 4px 10px 54px 0;
+
+  /* ---- Motion ---- */
+  --press:scale(.96);
+  --ease:cubic-bezier(.2,.6,.2,1);
+}
