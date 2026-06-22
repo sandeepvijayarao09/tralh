@@ -124,3 +124,15 @@
   .tiers{grid-template-columns:1fr}
   .grid--3{grid-template-columns:1fr}
 }
+
+/* ---- Architecture diagram (parent → houses → levels) — for dark tiles ---- */
+.arch{width:100%;max-width:720px;margin:var(--xl) auto 0;display:flex;flex-direction:column;align-items:center;text-align:center}
+.arch__node{display:flex;flex-direction:column;align-items:center;gap:6px}
+.arch__title{font-family:var(--display);font-weight:600;font-size:38px;letter-spacing:.06em;color:var(--accent-on-dark);line-height:1}
+.arch__label{font-family:var(--display);font-weight:600;font-size:26px;color:var(--on-dark);line-height:1.1}
+.arch__sub{font-family:var(--text);font-size:var(--t-caption);color:var(--on-dark-muted);max-width:460px;line-height:1.5}
+.arch__line{width:1px;height:46px;background:var(--accent-on-dark);opacity:.45;margin:8px 0}
+.arch__houses{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;max-width:340px;margin-top:12px}
+.arch__house{width:8px;height:8px;border:1px solid var(--accent-on-dark);transform:rotate(45deg);opacity:.85}
+.arch__levels{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+.arch__level{font-family:var(--caps);text-transform:uppercase;letter-spacing:.18em;font-size:12px;color:var(--accent-on-dark);border:1px solid var(--accent-on-dark);border-radius:var(--r-pill);padding:9px 22px}
