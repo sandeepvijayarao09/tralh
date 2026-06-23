@@ -139,3 +139,11 @@
 
 /* ---- Maison palette strip (5 authentic court colours) ---- */
 .swatches.swatches--maison{grid-template-columns:repeat(5,1fr);max-width:760px}
+
+/* ---- House Film poster (holds the film when produced) ---- */
+.film{position:relative;width:100%;max-width:880px;aspect-ratio:16/9;margin-inline:auto;
+  border:1px solid var(--hairline-on-dark);border-radius:var(--r-lg);overflow:hidden;
+  display:flex;align-items:center;justify-content:center;background:var(--surface-tile-dark-2)}
+.film__star{position:absolute;width:46%;color:var(--accent-on-dark);opacity:.16}
+.film__play{position:relative;width:88px;height:88px;color:var(--accent-on-dark);transition:transform .35s var(--ease)}
+.film:hover .film__play{transform:scale(1.06)}
