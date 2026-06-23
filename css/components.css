@@ -136,3 +136,6 @@
 .arch__house{width:8px;height:8px;border:1px solid var(--accent-on-dark);transform:rotate(45deg);opacity:.85}
 .arch__levels{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
 .arch__level{font-family:var(--caps);text-transform:uppercase;letter-spacing:.18em;font-size:12px;color:var(--accent-on-dark);border:1px solid var(--accent-on-dark);border-radius:var(--r-pill);padding:9px 22px}
+
+/* ---- Maison palette strip (5 authentic court colours) ---- */
+.swatches.swatches--maison{grid-template-columns:repeat(5,1fr);max-width:760px}
