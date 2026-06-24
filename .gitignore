@@ -1,0 +1,11 @@
+# OS / editor junk
+.DS_Store
+.AppleDouble
+Thumbs.db
+*~
+*.swp
+*.bak
+*.orig
+
+# Local scratch / preview mirrors
+/tmp/

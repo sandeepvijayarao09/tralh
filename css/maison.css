@@ -1,0 +1,71 @@
+/* ============================================================
+   TRALH — MAISON THEMING LAYER
+   Loaded ONLY by maison-*.html (after motion.css).
+   The House system stays fixed; each maison sets its own colour
+   and lets it drive the page, so the 21 houses read as siblings
+   of one parent — distinct, never disjointed.
+
+   Each page sets, in its inline <style>:
+     --accent          brand colour on light surfaces
+     --accent-on-dark  lighter brand colour on dark surfaces
+     --brand-deep      a near-black tint of the brand hue (hero/maison ground)
+
+   Safe by fallback: with no --brand-deep, the ground stays void.
+   ============================================================ */
+:root{
+  --brand-deep:#0e0e13;   /* ≈ void; every maison overrides this */
+}
+
+/* ---- 1 · The hero opens in the house's colour, not a generic void ---- */
+.hero.tile--void{
+  position:relative;
+  background:
+    radial-gradient(135% 105% at 50% 16%,
+      var(--brand-deep) 0%,
+      color-mix(in srgb, var(--brand-deep) 52%, var(--surface-black)) 42%,
+      var(--surface-black) 80%);
+}
+/* an oversized cipher rests behind the name — the house's mark as atmosphere */
+.hero__crest{
+  position:absolute;left:50%;top:50%;translate:-50% -50%;
+  width:min(580px,86vw);height:auto;
+  color:var(--accent-on-dark);opacity:.07;
+  pointer-events:none;z-index:0;
+}
+.hero .tile__inner{position:relative;z-index:1}
+/* the small hero cipher gains a soft halo in the house colour */
+.hero .tralh-cipher{
+  filter:drop-shadow(0 0 26px color-mix(in srgb, var(--accent-on-dark) 55%, transparent));
+}
+
+/* ---- 2 · The dark "maison" tile carries a quieter echo of the hero ---- */
+#maison.tile--dark{
+  background:
+    radial-gradient(125% 130% at 50% 0%,
+      color-mix(in srgb, var(--brand-deep) 72%, var(--surface-tile-dark)) 0%,
+      var(--surface-tile-dark) 72%);
+}
+
+/* ---- 3 · Accent-true interaction (replaces the hardcoded gold washes) ---- */
+.btn--ghost:hover{background:color-mix(in srgb, var(--accent) 10%, transparent)}
+.tile--dark .btn--ghost:hover,
+.tile--void .btn--ghost:hover{background:color-mix(in srgb, var(--accent-on-dark) 13%, transparent)}
+.btn--primary:hover{box-shadow:0 10px 30px color-mix(in srgb, var(--accent) 34%, transparent)}
+.tier:hover{box-shadow:0 18px 44px color-mix(in srgb, var(--brand-deep) 60%, transparent)}
+
+/* ---- 4 · The palette section becomes the house's explicit colour story ---- */
+.swatches.swatches--maison{
+  max-width:820px;
+  box-shadow:0 24px 60px rgba(0,0,0,.16);
+}
+.swatches--maison .swatch{aspect-ratio:4/5}
+.swatches--maison .swatch span{
+  font-size:11px;letter-spacing:.09em;opacity:.94;padding-bottom:2px;
+}
+/* hairline seams read the strip as five considered colours, not one bar */
+.swatches--maison .swatch + .swatch{box-shadow:inset 1px 0 0 rgba(255,255,255,.07)}
+
+/* ---- Respect the user: no extra motion introduced; halo is static ---- */
+@media (prefers-reduced-motion:reduce){
+  .hero .tralh-cipher{filter:none}
+}
