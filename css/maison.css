@@ -8,22 +8,39 @@
    Each page sets, in its inline <style>:
      --accent          brand colour on light surfaces
      --accent-on-dark  lighter brand colour on dark surfaces
-     --brand-deep      a near-black tint of the brand hue (hero/maison ground)
+     --brand-deep      a near-black tint of the hue (dark grounds, nav, footer)
+     --brand-canvas    a pale tint of the hue (light tiles, body)
+     --brand-parchment a slightly deeper pale tint (parchment tiles, sub-nav)
 
-   Safe by fallback: with no --brand-deep, the ground stays void.
+   The whole page wears the house's palette; text stays dark on light and
+   ivory on dark, so legibility is unchanged. Safe by fallback: with no brand
+   vars set, every surface keeps the House default.
    ============================================================ */
 :root{
-  --brand-deep:#0e0e13;   /* ≈ void; every maison overrides this */
+  --brand-deep:#0e0e13;                  /* ≈ void; every maison overrides these */
+  --brand-canvas:var(--canvas);
+  --brand-parchment:var(--canvas-parchment);
 }
+
+/* ---- 0 · Surfaces — the whole page is in the house's colour ---- */
+body,
+.tile--light{background:var(--brand-canvas)}
+.tile--parchment{background:var(--brand-parchment)}
+.tile--dark,
+.tile--void{background:var(--brand-deep)}
+.gnav,.tray,.foot{background:var(--brand-deep)}
+.subnav{background:color-mix(in srgb, var(--brand-parchment) 82%, transparent)}
+/* tier cards lift gently off the branded ground */
+.tier{background:color-mix(in srgb, var(--brand-deep) 82%, #ffffff 7%)}
 
 /* ---- 1 · The hero opens in the house's colour, not a generic void ---- */
 .hero.tile--void{
   position:relative;
   background:
-    radial-gradient(135% 105% at 50% 16%,
-      var(--brand-deep) 0%,
-      color-mix(in srgb, var(--brand-deep) 52%, var(--surface-black)) 42%,
-      var(--surface-black) 80%);
+    radial-gradient(130% 100% at 50% 15%,
+      color-mix(in srgb, var(--brand-deep) 82%, #ffffff 7%) 0%,
+      var(--brand-deep) 58%,
+      color-mix(in srgb, var(--brand-deep) 84%, #000000) 100%);
 }
 /* an oversized cipher rests behind the name — the house's mark as atmosphere */
 .hero__crest{
@@ -42,8 +59,8 @@
 #maison.tile--dark{
   background:
     radial-gradient(125% 130% at 50% 0%,
-      color-mix(in srgb, var(--brand-deep) 72%, var(--surface-tile-dark)) 0%,
-      var(--surface-tile-dark) 72%);
+      color-mix(in srgb, var(--brand-deep) 84%, #ffffff 6%) 0%,
+      var(--brand-deep) 70%);
 }
 
 /* ---- 3 · Accent-true interaction (replaces the hardcoded gold washes) ---- */
