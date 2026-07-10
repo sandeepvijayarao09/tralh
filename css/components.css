@@ -147,3 +147,8 @@
 .film__star{position:absolute;width:46%;color:var(--accent-on-dark);opacity:.16}
 .film__play{position:relative;width:88px;height:88px;color:var(--accent-on-dark);transition:transform .35s var(--ease)}
 .film:hover .film__play{transform:scale(1.06)}
+
+/* ---- Houses lineup: each card carries its house colour ---- */
+#maisons .card{border-top:3px solid var(--ca,var(--hairline))}
+#maisons .card h3{color:var(--ca)}
+#maisons .card:hover{border-color:var(--ca,var(--accent))}

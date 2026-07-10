@@ -82,6 +82,16 @@ body,
 /* hairline seams read the strip as five considered colours, not one bar */
 .swatches--maison .swatch + .swatch{box-shadow:inset 1px 0 0 rgba(255,255,255,.07)}
 
+/* ---- 5 · Typographic voice — each house carries its own display face ----
+   Each maison sets --display (its face) + --w-hero/--w-head (weights that suit
+   that face, so single-weight display faces never render faux-bold). The
+   wordmark and every heading speak in the house's own type; body + small caps
+   stay constant for a clean read. */
+.gnav__cipher{font-family:var(--display);letter-spacing:.06em;font-weight:var(--w-head,600)}
+.subnav__title{font-family:var(--display);font-weight:var(--w-head,600)}
+.hero-display{font-weight:var(--w-hero,500)}
+h1,h2,h3,h4,.display-lg,.display-md{font-weight:var(--w-head,600)}
+
 /* ---- Respect the user: no extra motion introduced; halo is static ---- */
 @media (prefers-reduced-motion:reduce){
   .hero .tralh-cipher{filter:none}
