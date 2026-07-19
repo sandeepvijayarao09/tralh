@@ -22,7 +22,6 @@ a:hover{text-decoration:underline;text-underline-offset:.18em;text-decoration-th
 /* ---- Containers ---- */
 .wrap{width:100%;max-width:1080px;margin-inline:auto;padding-inline:24px}
 .wrap--wide{max-width:1320px}
-.wrap--text{max-width:720px}
 
 /* ---- The tile system: full-bleed alternating surfaces.
         The colour change IS the section divider — no borders, no chrome. ---- */
@@ -44,8 +43,6 @@ h1,h2,h3,h4{font-family:var(--display);font-weight:600;line-height:1.12;letter-s
 .lead{font-family:var(--text);font-size:var(--t-lead);font-weight:400;line-height:1.32;color:var(--ink-muted)}
 .tile--dark .lead,.tile--void .lead,.tile--dark-2 .lead{color:var(--on-dark-muted)}
 .lead-airy{font-family:var(--text);font-size:var(--t-lead-airy);font-weight:400;line-height:1.55}
-.body{font-size:var(--t-body);line-height:1.62}
-.tile--dark .body,.tile--void .body{color:var(--on-dark-muted)}
 
 /* eyebrow / tagline — letter-spaced gold caps in place of Apple's small subhead */
 .eyebrow{
@@ -64,8 +61,6 @@ h1,h2,h3,h4{font-family:var(--display);font-weight:600;line-height:1.12;letter-s
 @media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto} }
 
 /* ---- Utilities ---- */
-.center{text-align:center}
-.stack-sm{display:flex;flex-direction:column;gap:var(--sm)}
 .maxw-sm{max-width:560px;margin-inline:auto}
 .maxw-md{max-width:680px;margin-inline:auto}
-.mt-lg{margin-top:var(--lg)}.mt-xl{margin-top:var(--xl)}
+.mt-lg{margin-top:var(--lg)}

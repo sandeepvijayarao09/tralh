@@ -7,10 +7,8 @@
 
   /* ---- Mark the current page in the nav ---- */
   var path = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
-  var brand = { 'darbar.html': 1, 'solene.html': 1, 'auri.html': 1 };
   document.querySelectorAll('.gnav__links a').forEach(function (a) {
-    var href = a.getAttribute('href');
-    if (href === path || (brand[path] && href === 'houses.html')) {
+    if (a.getAttribute('href') === path) {
       a.setAttribute('aria-current', 'page');
     }
   });

@@ -48,7 +48,6 @@
   filter:drop-shadow(3px 5px 30px rgba(0,0,0,.22))}
 .tile--dark .artifact,.tile--void .artifact,.tile--dark-2 .artifact{color:var(--accent-on-dark);
   filter:drop-shadow(4px 10px 54px rgba(0,0,0,.55))}
-.artifact--sm{width:clamp(96px,12vw,140px)}
 .artifact--lg{width:clamp(200px,32vw,360px)}
 
 /* an object plate: photographic artifact resting on a tinted plinth */
@@ -58,7 +57,6 @@
 
 /* ---- Maison / utility grid (white cards, hairline, lg radius) ---- */
 .grid{display:grid;gap:var(--lg);grid-template-columns:repeat(auto-fit,minmax(220px,1fr));width:100%}
-.grid--3{grid-template-columns:repeat(3,1fr)}
 .card{background:var(--canvas);border:1px solid var(--hairline);border-radius:var(--r-lg);
   padding:var(--xl) var(--lg);text-align:center;display:flex;flex-direction:column;gap:var(--xs);align-items:center;
   transition:border-color .25s,transform .25s var(--ease)}
@@ -92,9 +90,6 @@
 
 /* ---- Footer ---- */
 .foot{background:var(--surface-black);color:var(--on-dark);padding-block:var(--section) var(--xl)}
-.foot__top{display:flex;flex-direction:column;align-items:center;gap:var(--md);text-align:center;margin-bottom:var(--xxl)}
-.foot__seal{color:var(--accent-on-dark);width:124px;height:124px}
-.foot__motto{font-family:var(--display);font-style:italic;font-weight:500;font-size:30px;letter-spacing:.02em;color:var(--accent-on-dark);line-height:1.1}
 .foot__cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:var(--xl);max-width:1080px;margin-inline:auto}
 .foot__col h4{font-family:var(--caps);font-size:var(--t-fine);font-weight:600;text-transform:uppercase;letter-spacing:.18em;color:var(--accent-on-dark);margin-bottom:var(--sm)}
 .foot__col a{display:block;color:var(--on-dark-muted);font-size:var(--t-caption);line-height:2.1;text-decoration:none}
@@ -122,7 +117,6 @@
   .tray a:hover{color:var(--accent-on-dark)}
   .subnav__links{display:none}
   .tiers{grid-template-columns:1fr}
-  .grid--3{grid-template-columns:1fr}
 }
 
 /* ---- Architecture diagram (parent → houses → levels) — for dark tiles ---- */
