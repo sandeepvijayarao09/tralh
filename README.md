@@ -1,5 +1,7 @@
 # TRALH — The Royal Authentic Luxury House
 
+[![Link check](https://github.com/sandeepvijayarao09/tralh/actions/workflows/links.yml/badge.svg)](https://github.com/sandeepvijayarao09/tralh/actions/workflows/links.yml)
+
 Static brand site for The Royal Authentic Luxury House: one house identity, three tiers and 21 maisons, each drawn from a historic royal court.
 
 **Live:** https://sandeepvijayarao09.github.io/tralh/
